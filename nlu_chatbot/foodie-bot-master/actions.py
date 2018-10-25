@@ -48,4 +48,11 @@ class ActionSuggest(Action):
         dispatcher.utter_message("is it ok for you? "
                                  "hint: I'm not going to "
                                  "find anything else :)")
-        return []
+        return [SlotSet('matches')]
+
+class ActionAskEmailID(Action):
+    def name(self):
+        return 'utter_ask_email_id'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message('')
