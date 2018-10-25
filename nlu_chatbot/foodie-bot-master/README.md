@@ -1,1 +1,2 @@
 # foodie-bot
+## Installation Steps
