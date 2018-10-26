@@ -41,6 +41,7 @@ class Zomato:
         city_name = '%20'.join(city_name)
         headers = {'Accept': 'application/json', 'user-key': self.user_key}
         r = (requests.get(base_url + "cities?q=" + city_name, headers=headers).content).decode("utf-8")
+        # r = (requests.get('https://developers.zomato.com/api/v2.1/search?entity_type=city&query=bangalore', headers=headers).content).decode("utf-8")
         a = ast.literal_eval(r)
 
         self.is_key_invalid(a)
