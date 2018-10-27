@@ -21,7 +21,7 @@ run-core:
 	python -m rasa_core.run --nlu models/foodiebot/nlu/default/current --core models/foodiebot/dialogue --endpoints endpoints.yml
 
 train-online:
-	python -m rasa_core.train  --finetune  -d restaurant_domain.yml -s data/stories.md  --nlu models/foodiebot/nlu/default/current -o models/foodiebot/dialogue --endpoints endpoints.yml
+	python -m rasa_core.train  --online  -d restaurant_domain.yml -s data/stories.md  --nlu models/foodiebot/nlu/default/current -o models/foodiebot/dialogue --endpoints endpoints.yml
 
 
 train-nlu:
