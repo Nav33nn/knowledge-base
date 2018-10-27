@@ -51,7 +51,7 @@ class ActionSearchRestaurants(Action):
                                    + restaurant['restaurant']['location']['address'] + "\n"
                     
 
-            dispatcher.utter_message("-----" + response)
+            dispatcher.utter_message("-----" + '\n'.join(response.split('\n')[:5]))
         else:
             dispatcher.utter_message("I'm really sorry to say this, but we do not operate in {} yet. Sorry for the inconvinience caused".format(city_name))
         return [SlotSet('location', loc)]
@@ -122,7 +122,7 @@ class ActionSendEmail(Action):
         else:
             body = 'The city you had selected do not belong to Tier 1 or Tier 2 cities. Apologies extended.'
 
-        body = response
+        body = '\n'.join(response.split('\n')[:5])
         msg = 'Subject: {}\n\n{}'.format(mail_subject, body)
 
         server.sendmail("bot.foodie.01@gmail.com", email_id, msg)
