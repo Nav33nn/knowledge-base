@@ -9,8 +9,7 @@ slots:
     type: text
   range:
     type: text
-  matches:
-    type: unfeaturized
+
 
 entities:
 - location
@@ -54,6 +53,13 @@ templates:
         payload: "Mexican"
       - title: "American"
         payload: "American"
+  utter_email_send_confirmation:
+    - text: "Do You want the search to be send via email?"
+      buttons:
+      - title: "Affirm"
+        payload: "Yes"
+      - title: "Deny"
+        payload: "No"
   utter_ask_price_range:
     - text: "What price range are you looking at?"
       buttons:
@@ -79,5 +85,6 @@ actions:
 - utter_ask_cuisine
 - utter_ask_price_range
 - action_search_restaurants
+- utter_email_send_confirmation
 - utter_ask_email_id
 - action_send_email
