@@ -7,8 +7,6 @@ slots:
     type: text #determine later
   email:
     type: text
-  restaurant:
-    type: text
   matches:
     type: unfeaturized
 
@@ -80,4 +78,5 @@ actions:
 - action_search_restaurants
 - utter_email_confirmation
 - utter_ask_email_id
+- utter_send_email
 - utter_email_send_confirmation
