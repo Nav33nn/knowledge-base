@@ -7,7 +7,7 @@ from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
 import zomatopy
 import json
-
+import  pickle
 
 class ActionSearchRestaurants(Action):
     def name(self):
@@ -23,7 +23,7 @@ class ActionSearchRestaurants(Action):
         lat = d1["location_suggestions"][0]["latitude"]
         lon = d1["location_suggestions"][0]["longitude"]
         city_name = d1["location_suggestions"][0]["city_name"]
-        known_cities = open('data/locations.txt').read()
+        known_city_ids = pickle.load('data/known_cities_id.pkl','rb')
         if city_name.lower() in known_cities.lower():            
             cuisines_dict = {'bakery': 5, 'chinese': 25, 'cafe': 30, 'italian': 55, 'biryani': 7, 'north indian': 50,
                              'south indian': 85}
