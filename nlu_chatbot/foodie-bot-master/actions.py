@@ -79,6 +79,8 @@ class ActionSendEmail(Action):
         city_id = get_city_ID(loc)
         location_detail = zomato.get_location(loc, 1)
         d1 = json.loads(location_detail)
+        lat = d1["location_suggestions"][0]["latitude"]
+        lon = d1["location_suggestions"][0]["longitude"]
         city_id = d1["location_suggestions"][0]["city_id"]
         known_city_ids = pickle.load('data/known_cities_id.pkl','rb')
         if city_id in known_city_ids:            

@@ -61,8 +61,6 @@ templates:
     - "Do you want the details on your email?"
   utter_ask_email_id:
     - "Can I have your email, Please?"
-  utter_email_send_confirmation:
-    - "Details of the restaurant has been sent over the email."
   utter_ask_howcanhelp:
     - "how can I help you?"
   utter_ask_location:
@@ -79,4 +77,3 @@ actions:
 - utter_email_confirmation
 - utter_ask_email_id
 - utter_send_email
-- utter_email_send_confirmation
