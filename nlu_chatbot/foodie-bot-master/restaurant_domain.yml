@@ -7,6 +7,8 @@ slots:
     type: text #determine later
   email:
     type: text
+  range:
+    type: text
   matches:
     type: unfeaturized
 
@@ -48,6 +50,10 @@ templates:
         payload: "South Indian"
       - title: "North Indian"
         payload: "North Indian"
+      - title: "Mexican"
+        payload: "Mexican"
+      - title: "American"
+        payload: "American"
   utter_ask_price_range:
     - text: "What price range are you looking at?"
       buttons:
@@ -57,8 +63,6 @@ templates:
         payload: "Rs. 300 to 700"
       - title: "More than 700"
         payload: "More than 700"
-  utter_email_confirmation:
-    - "Do you want the details on your email?"
   utter_ask_email_id:
     - "Can I have your email, Please?"
   utter_ask_howcanhelp:
@@ -73,7 +77,7 @@ actions:
 - utter_ask_howcanhelp
 - utter_ask_location
 - utter_ask_cuisine
+- utter_ask_price_range
 - action_search_restaurants
-- utter_email_confirmation
-- utter_ask_email_id
-- utter_send_email
+- action_ask_email_id
+- action_send_email

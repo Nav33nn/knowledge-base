@@ -25,6 +25,36 @@
           "veggie",
           "vegg"
         ]
+      },
+      {
+        "value": "moderate",
+        "synonyms": [
+          "mid",
+          "medium",
+          "middle"
+        ]
+      },
+      {
+        "value": "low",
+        "synonyms": [
+	  "<",
+          "less",
+          "very low",
+          "least",
+          "cheap",
+          "cheapest"
+        ]
+      },
+      {
+        "value": "high",
+        "synonyms": [
+          ">",
+          "costly",
+          "high end",
+          "expensive",
+          "top",
+          "costliest"
+        ]
       }
     ],
     "common_examples": [

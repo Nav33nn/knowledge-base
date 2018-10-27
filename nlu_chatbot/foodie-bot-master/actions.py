@@ -55,9 +55,10 @@ class ActionSuggest(Action):
                                  "find anything else :)")
         return [SlotSet('matches')]
 
+
 class ActionSendEmail(Action):
     def name(self):
-        return 'utter_send_email'
+        return 'action_send_email'
 
     def run(self, dispatcher, tracker, domain):
         email_id = tracker.get_slot('email')
@@ -76,7 +77,6 @@ class ActionSendEmail(Action):
         zomato = zomatopy.initialize_app(config)
         loc = tracker.get_slot('location')
         cuisine = tracker.get_slot('cuisine')
-        city_id = get_city_ID(loc)
         location_detail = zomato.get_location(loc, 1)
         d1 = json.loads(location_detail)
         lat = d1["location_suggestions"][0]["latitude"]
