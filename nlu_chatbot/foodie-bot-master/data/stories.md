@@ -86,3 +86,86 @@
 * deny
     - utter_goodbye
 
+## Generated Story -188370696778953598
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "kolkata"}
+    - slot{"location": "kolkata"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_price_range
+* price_check{"range": "-"}
+    - slot{"range": "-"}
+    - action_search_restaurants
+    - slot{"location": "kolkata"}
+    - utter_ask_email_id
+* send_email{"email": "reghuram.rv@gmail.com"}
+    - slot{"email": "reghuram.rv@gmail.com"}
+    - action_send_email
+    - utter_ask_howcanhelp
+* goodbye
+    - utter_goodbye
+
+## Generated Story 8104540199928037149
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "italian"}
+    - slot{"cuisine": "italian"}
+    - utter_ask_location
+* restaurant_search{"location": "chennai"}
+    - slot{"location": "chennai"}
+    - utter_ask_price_range
+* price_check
+    - utter_ask_price_range
+    - utter_ask_price_range
+* price_check{"price": "300"}
+    - slot{"price": "300"}
+    - utter_ask_price_range
+* price_check{"range": "-"}
+    - slot{"range": "-"}
+    - action_search_restaurants
+    - slot{"location": "chennai"}
+* send_email
+    - utter_ask_email_id
+* send_email{"email": "reghuram.rv@gmail.com"}
+    - slot{"email": "reghuram.rv@gmail.com"}
+    - utter_ask_howcanhelp
+
+## Generated Story -3483316133665423216
+* restaurant_search{"cuisine": "mexican", "location": "mumbai", "range": "between"}
+    - slot{"cuisine": "mexican"}
+    - slot{"location": "mumbai"}
+    - slot{"range": "between"}
+    - action_search_restaurants
+    - slot{"location": "mumbai"}
+    - utter_ask_email_id
+* send_email{"email": "reghuram.rv@gmail.com"}
+    - slot{"email": "reghuram.rv@gmail.com"}
+    - action_send_email
+    - utter_ask_howcanhelp
+* deny
+    - utter_goodbye
+
+## Generated Story -5274105035582188331
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "raipur"}
+    - slot{"location": "raipur"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "south indian"}
+    - slot{"cuisine": "south indian"}
+    - utter_ask_price_range
+* price_check{"range": "between"}
+    - slot{"range": "between"}
+    - action_search_restaurants
+    - slot{"location": "raipur"}
+    - utter_ask_email_id
+* send_email{"email": "reghuram.rv@gmail.com"}
+    - slot{"email": "reghuram.rv@gmail.com"}
+    - action_send_email
+    - utter_ask_howcanhelp
+* goodbye
+    - utter_goodbye
+
+

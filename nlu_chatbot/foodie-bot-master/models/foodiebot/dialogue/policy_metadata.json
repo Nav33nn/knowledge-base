@@ -1,0 +1,35 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "location",
+        "email",
+        "range",
+        "price",
+        "cuisine"
+      ]
+    },
+    "action_search_restaurants": {
+      "slots": [
+        "location"
+      ]
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
+    "utter_ask_howcanhelp": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.11.12",
+  "python": "3.6.6",
+  "max_histories": [
+    3,
+    5
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "policy.RestaurantPolicy"
+  ]
+}
