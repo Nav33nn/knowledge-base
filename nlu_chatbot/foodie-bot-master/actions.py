@@ -18,24 +18,38 @@ class ActionSearchRestaurants(Action):
         zomato = zomatopy.initialize_app(config)
         loc = tracker.get_slot('location')
         cuisine = tracker.get_slot('cuisine')
+        price_range = tracker.get_slot('range')
         location_detail = zomato.get_location(loc, 1)
         d1 = json.loads(location_detail)
         lat = d1["location_suggestions"][0]["latitude"]
         lon = d1["location_suggestions"][0]["longitude"]
         city_id = d1["location_suggestions"][0]["city_id"]
+        average_cost = 
         known_city_ids = pickle.load('data/known_cities_id.pkl','rb')
         if city_id in known_city_ids:            
             cuisines_dict = {'bakery': 5, 'chinese': 25, 'cafe': 30, 'italian': 55, 'biryani': 7, 'north indian': 50,
                              'south indian': 85}
-            results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 5)
+            results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 50)
             d = json.loads(results)
+
             response = ""
             if d['results_found'] == 0:
                 response = "no results"
             else:
                 for restaurant in d['restaurants']:
-                    response = response + "Found " + restaurant['restaurant']['name'] + " in " \
-                               + restaurant['restaurant']['location']['address'] + "\n"
+                    if price_range == 'less_than':
+                        if restaurant['restaurant']["average_cost_for_two"] <= 300:
+                            response = response + "Found " + restaurant['restaurant']['name'] + " in " \
+                                   + restaurant['restaurant']['location']['address'] + "\n"
+                    elif price_range == 'between':
+                        if restaurant['restaurant']["average_cost_for_two"] > 300 and restaurant['restaurant']["average_cost_for_two"] <=700:
+                            response = response + "Found " + restaurant['restaurant']['name'] + " in " \
+                                   + restaurant['restaurant']['location']['address'] + "\n"
+                    else:
+                        if restaurant['restaurant']["average_cost_for_two"] > 700
+                            response = response + "Found " + restaurant['restaurant']['name'] + " in " \
+                                   + restaurant['restaurant']['location']['address'] + "\n"
+                    
 
             dispatcher.utter_message("-----" + response)
         else:
@@ -86,15 +100,25 @@ class ActionSendEmail(Action):
         if city_id in known_city_ids:            
             cuisines_dict = {'bakery': 5, 'chinese': 25, 'cafe': 30, 'italian': 55, 'biryani': 7, 'north indian': 50,
                              'south indian': 85}
-            results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 5)
+            results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 50)
             d = json.loads(results)
             response = ""
             if d['results_found'] == 0:
                 response = "no results"
             else:
                 for restaurant in d['restaurants']:
-                    response = response + "Found " + restaurant['restaurant']['name'] + " in " \
-                               + restaurant['restaurant']['location']['address'] + "\n"
+                    if price_range == 'less_than':
+                        if restaurant['restaurant']["average_cost_for_two"] <= 300:
+                            response = response + "Found " + restaurant['restaurant']['name'] + " in " \
+                                   + restaurant['restaurant']['location']['address'] + "\n"
+                    elif price_range == 'between':
+                        if restaurant['restaurant']["average_cost_for_two"] > 300 and restaurant['restaurant']["average_cost_for_two"] <=700:
+                            response = response + "Found " + restaurant['restaurant']['name'] + " in " \
+                                   + restaurant['restaurant']['location']['address'] + "\n"
+                    else:
+                        if restaurant['restaurant']["average_cost_for_two"] > 700
+                            response = response + "Found " + restaurant['restaurant']['name'] + " in " \
+                                   + restaurant['restaurant']['location']['address'] + "\n"
         else:
             body = 'The city you had selected do not belong to Tier 1 or Tier 2 cities. Apologies extended.'
 
