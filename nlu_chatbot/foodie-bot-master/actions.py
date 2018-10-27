@@ -14,7 +14,7 @@ class ActionSearchRestaurants(Action):
         return 'action_search_restaurants'
 
     def run(self, dispatcher, tracker, domain):
-        config = {"user_key": "6ce88a5ec1419e335afa1c7f92f4b739"}
+        config = {"user_key": "6f2bee5751b38dc2bcba658ed48099c1"}
         zomato = zomatopy.initialize_app(config)
         loc = tracker.get_slot('location')
         cuisine = tracker.get_slot('cuisine')
@@ -24,11 +24,19 @@ class ActionSearchRestaurants(Action):
         lat = d1["location_suggestions"][0]["latitude"]
         lon = d1["location_suggestions"][0]["longitude"]
         city_id = d1["location_suggestions"][0]["city_id"]
-        average_cost = 
-        known_city_ids = pickle.load('data/known_cities_id.pkl','rb')
+        with open('data/known_cities_id.pkl','rb') as city_file:
+            known_city_ids = pickle.load(city_file)
         if city_id in known_city_ids:            
-            cuisines_dict = {'bakery': 5, 'chinese': 25, 'cafe': 30, 'italian': 55, 'biryani': 7, 'north indian': 50,
-                             'south indian': 85}
+            cuisines_dict = {'bakery': 5,
+                             'chinese': 25,
+                             'cafe': 30,
+                             'italian': 55,
+                             'biryani': 7,
+                             'north indian': 50,
+                             'south indian': 85,
+                             'mexican': 73,
+                             'american': 1
+                             }
             results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 50)
             d = json.loads(results)
 
@@ -46,14 +54,14 @@ class ActionSearchRestaurants(Action):
                             response = response + "Found " + restaurant['restaurant']['name'] + " in " \
                                    + restaurant['restaurant']['location']['address'] + "\n"
                     else:
-                        if restaurant['restaurant']["average_cost_for_two"] > 700
+                        if restaurant['restaurant']["average_cost_for_two"] > 700:
                             response = response + "Found " + restaurant['restaurant']['name'] + " in " \
                                    + restaurant['restaurant']['location']['address'] + "\n"
                     
-
             dispatcher.utter_message("-----" + '\n'.join(response.split('\n')[:5]))
         else:
-            dispatcher.utter_message("I'm really sorry to say this, but we do not operate in {} yet. Sorry for the inconvinience caused".format(city_name))
+            dispatcher.utter_message("I'm really sorry to say this, but we do not operate in {} yet. Sorry for the inconvinience caused"
+                                     .format(zomato.get_city_name(city_id)))
         return [SlotSet('location', loc)]
 
 
@@ -87,19 +95,29 @@ class ActionSendEmail(Action):
 
         #Send the mail
         mail_subject = 'Restaurant Details'
-        config = {"user_key": "6ce88a5ec1419e335afa1c7f92f4b739"}
+        config = {"user_key": "6f2bee5751b38dc2bcba658ed48099c1"}
         zomato = zomatopy.initialize_app(config)
         loc = tracker.get_slot('location')
         cuisine = tracker.get_slot('cuisine')
+        price_range = tracker.get_slot('range')
         location_detail = zomato.get_location(loc, 1)
         d1 = json.loads(location_detail)
         lat = d1["location_suggestions"][0]["latitude"]
         lon = d1["location_suggestions"][0]["longitude"]
         city_id = d1["location_suggestions"][0]["city_id"]
-        known_city_ids = pickle.load('data/known_cities_id.pkl','rb')
+        with open('data/known_cities_id.pkl','rb') as city_file:
+            known_city_ids = pickle.load(city_file)
         if city_id in known_city_ids:            
-            cuisines_dict = {'bakery': 5, 'chinese': 25, 'cafe': 30, 'italian': 55, 'biryani': 7, 'north indian': 50,
-                             'south indian': 85}
+            cuisines_dict = {'bakery': 5,
+                             'chinese': 25,
+                             'cafe': 30,
+                             'italian': 55,
+                             'biryani': 7,
+                             'north indian': 50,
+                             'south indian': 85,
+                             'mexican': 73,
+                             'american': 1
+                             }
             results = zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 50)
             d = json.loads(results)
             response = ""
@@ -116,7 +134,7 @@ class ActionSendEmail(Action):
                             response = response + "Found " + restaurant['restaurant']['name'] + " in " \
                                    + restaurant['restaurant']['location']['address'] + "\n"
                     else:
-                        if restaurant['restaurant']["average_cost_for_two"] > 700
+                        if restaurant['restaurant']["average_cost_for_two"] > 700:
                             response = response + "Found " + restaurant['restaurant']['name'] + " in " \
                                    + restaurant['restaurant']['location']['address'] + "\n"
         else:

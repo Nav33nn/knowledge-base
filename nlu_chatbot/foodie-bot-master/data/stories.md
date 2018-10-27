@@ -67,3 +67,22 @@
 * affirm
     - utter_goodbye
     - export
+## Generated Story -1371393708137348274
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "italian", "location": "bangalore"}
+    - slot{"cuisine": "italian"}
+    - slot{"location": "bangalore"}
+    - utter_ask_price_range
+* price_check{"range": "between"}
+    - slot{"range": "between"}
+    - action_search_restaurants
+    - slot{"location": "bangalore"}
+    - utter_ask_email_id
+* send_email{"email": "reghuram.rv@gmail.com"}
+    - slot{"email": "reghuram.rv@gmail.com"}
+    - action_send_email
+    - utter_ask_howcanhelp
+* deny
+    - utter_goodbye
+

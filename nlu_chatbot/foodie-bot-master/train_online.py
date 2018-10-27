@@ -5,9 +5,6 @@ from __future__ import unicode_literals
 
 import logging
 
-from rasa_core.agent import Agent
-from rasa_core.channels.console import ConsoleInputChannel
-from rasa_core.interpreter import RegexInterpreter
 from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
 from rasa_core.interpreter import RasaNLUInterpreter
@@ -34,5 +31,5 @@ def run_restaurant_online(input_channel, interpreter,
 
 if __name__ == '__main__':
     logging.basicConfig(level="INFO")
-    nlu_interpreter = RasaNLUInterpreter('./models/nlu/default/restaurantnlu')
-    run_restaurant_online(ConsoleInputChannel(), nlu_interpreter)
+    nlu_interpreter = RasaNLUInterpreter('./models/foodiebot/nlu/default/current')
+    print(nlu_interpreter.parse(u"Send an email on reghuram.rv@abc.com"))

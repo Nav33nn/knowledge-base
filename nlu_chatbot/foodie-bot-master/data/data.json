@@ -8,6 +8,10 @@
       {
         "name": "greet",
         "pattern": "hey[^\\s]*"
+      },
+      {
+        "name": "email",
+        "pattern": "\\S+@\\S+.\\S+"
       }
     ],
     "entity_synonyms": [
@@ -27,6 +31,16 @@
         ]
       },
       {
+        "value": "between",
+        "synonyms": [
+          "inbetween",
+          "in-between",
+          "within",
+          "with-in",
+          "-"
+        ]
+      },
+      {
         "value": "moderate",
         "synonyms": [
           "mid",
@@ -37,7 +51,7 @@
       {
         "value": "low",
         "synonyms": [
-	  "<",
+          "<",
           "less",
           "very low",
           "least",
@@ -2128,6 +2142,78 @@
             "end": 4,
             "value": "300",
             "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Send me an email at someone.something@somedomain.com",
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 20,
+            "end": 52,
+            "value": "someone.something@somedomain.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "Here is my email bot.foodie.01@gmail.com",
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 17,
+            "end": 40,
+            "value": "bot.foodie.01@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "reghuram.rv@gmail.com",
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 0,
+            "end": 21,
+            "value": "reghuram.rv@gmail.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "Here you go tester@domain.com",
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 12,
+            "end": 29,
+            "value": "tester@domain.com",
+            "entity": "email"
+          }
+        ]
+      },
+      {
+        "text": "in the range of 300 - 700",
+        "intent": "price_check",
+        "entities": [
+          {
+            "start": 20,
+            "end": 21,
+            "value": "-",
+            "entity": "range"
+          }
+        ]
+      },
+      {
+        "text": "price between 300 and 700",
+        "intent": "",
+        "entities": [
+          {
+            "start": 6,
+            "end": 13,
+            "value": "between",
+            "entity": "range"
           }
         ]
       }
