@@ -144,6 +144,7 @@ class ActionSendEmail(Action):
             return [SlotSet('location', loc)]
             #body = 'The city you had selected do not belong to Tier 1 or Tier 2 cities. Apologies extended.'
 
+
         body = '\n'.join(response.split('\n')[:5])
         msg = 'Subject: {}\n\n{}'.format(mail_subject, body)
 
