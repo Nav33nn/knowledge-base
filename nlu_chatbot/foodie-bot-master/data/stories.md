@@ -163,7 +163,7 @@
     - slot{"price": "300"}
     - utter_ask_price_range
 * price_check{"range": "-"}
-    - slot{"range": "-"}
+    - slot{"range": "between"}
     - action_search_restaurants
     - slot{"location": "chennai"}
     - utter_email_send_confirmation
@@ -331,6 +331,7 @@
     - utter_ask_price_range
 * price_check{"range": "more"}
     - slot{"range": "more"}
+    - slot{"price": "700"}
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
@@ -409,6 +410,7 @@
     - utter_ask_price_range
 * price_check{"range": "more"}
     - slot{"range": "more"}
+    - slot{"price": "700"}
     - action_search_restaurants
     - slot{"location": "chennai"}
     - utter_email_send_confirmation
@@ -434,7 +436,8 @@
     - slot{"cuisine": "north indian"}
     - utter_ask_price_range
 * price_check{"range": "less than"}
-    - slot{"range": "less than"}
+    - slot{"range": "less"}
+    - slot{"price": "300"}
     - action_search_restaurants
     - slot{"location": "delhi"}
     - utter_email_send_confirmation
@@ -539,3 +542,38 @@
     - action_send_email
     - slot{"location": "chennai"}
     - utter_goodbye
+
+## Generated Story 4053657311894282044
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "dehradoon"}
+    - slot{"location": "dehradoon"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_price_range
+* price_check{"range": "less than", "price": "300"}
+    - slot{"price": "300"}
+    - slot{"range": "less"}
+    - action_search_restaurants
+    - slot{"location": "dehradoon"}
+    - utter_email_send_confirmation
+* deny
+    - utter_goodbye
+
+## Generated Story -5409371390447508982
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "shimla"}
+    - slot{"location": "shimla"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_price_range
+* price_check{"range": "less than", "price": "300"}
+    - slot{"price": "300"}
+    - slot{"range": "less"}
+    - action_search_restaurants
+    - slot{"location": "shimla"}
+    - utter_goodbye
+
