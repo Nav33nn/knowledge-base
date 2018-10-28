@@ -2,11 +2,11 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "email",
-        "location",
-        "price",
         "range",
-        "cuisine"
+        "email",
+        "cuisine",
+        "price",
+        "location"
       ]
     },
     "action_search_restaurants": {
@@ -17,22 +17,26 @@
     "utter_goodbye": {
       "slots": []
     },
-    "utter_ask_howcanhelp": {
-      "slots": []
-    },
     "action_send_email": {
+      "slots": [
+        "location"
+      ]
+    },
+    "utter_ask_howcanhelp": {
       "slots": []
     }
   },
   "rasa_core": "0.11.12",
   "python": "3.6.3",
   "max_histories": [
+    null,
     3,
-    5
+    3
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
+    "rasa_core.policies.fallback.FallbackPolicy",
     "rasa_core.policies.memoization.MemoizationPolicy",
-    "policy.RestaurantPolicy"
+    "rasa_core.policies.keras_policy.KerasPolicy"
   ]
 }
