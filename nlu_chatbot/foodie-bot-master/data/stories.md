@@ -151,7 +151,6 @@
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
     - action_send_email
-    - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
     - action_restart
@@ -442,7 +441,6 @@
     - slot{"email": "nav33nn92@gmail.com"}
     - action_send_email
     - slot{"location": "chennai"}
-    - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
     - action_restart
@@ -628,7 +626,6 @@
     - slot{"email": "sanjay.7183@gmail.com"}
     - action_send_email
     - slot{"location": "bangalore"}
-    - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
     - action_restart
@@ -654,7 +651,6 @@
     - slot{"email": "sanjay.7183@gmail.com"}
     - action_send_email
     - slot{"location": "allahabad"}
-    - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
     - action_restart
@@ -677,7 +673,6 @@
     - utter_email_send_confirmation
 * send_email{"email": "sanjay.7183@gmail.com"}
     - slot{"email": "sanjay.7183@gmail.com"}
-    - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
     - action_restart
