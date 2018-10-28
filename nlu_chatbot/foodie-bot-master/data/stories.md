@@ -11,8 +11,8 @@
     - action_search_restaurants
     - slot{"location": "delhi"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
+    - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
@@ -29,10 +29,13 @@
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "North Indian"}
     - slot{"cuisine": "North Indian"}
+    - utter_ask_price_range
+* price_check{"range": "between"}
+    - slot{"range": "between"}
     - action_search_restaurants
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
+    - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
@@ -50,8 +53,8 @@
     - slot{"cuisine": "chinese"}
     - action_search_restaurants
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
+    - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
@@ -68,11 +71,14 @@
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
+    - utter_ask_price_range
+* price_check{"range": "between"}
+    - slot{"range": "between"}
     - action_search_restaurants
     - slot{"location": "delhi"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
+    - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
@@ -87,10 +93,13 @@
     - utter_ask_cuisine
 * restaurant_search{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
+    - utter_ask_price_range
+* price_check{"range": "between"}
+    - slot{"range": "between"}
     - action_search_restaurants
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
+    - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
@@ -109,8 +118,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
@@ -129,12 +137,11 @@
     - slot{"cuisine": "chinese"}
     - utter_ask_price_range
 * price_check{"range": "-"}
-    - slot{"range": "-"}
+    - slot{"range": "between"}
     - action_search_restaurants
     - slot{"location": "kolkata"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
@@ -152,9 +159,6 @@
 * restaurant_search{"location": "chennai"}
     - slot{"location": "chennai"}
     - utter_ask_price_range
-* price_check
-    - utter_ask_price_range
-    - utter_ask_price_range
 * price_check{"price": "300"}
     - slot{"price": "300"}
     - utter_ask_price_range
@@ -163,9 +167,7 @@
     - action_search_restaurants
     - slot{"location": "chennai"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
-* send_email
+* affirm
     - utter_ask_email_id
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
@@ -179,8 +181,7 @@
     - action_search_restaurants
     - slot{"location": "mumbai"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
@@ -203,8 +204,7 @@
     - action_search_restaurants
     - slot{"location": "raipur"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
@@ -222,8 +222,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
@@ -239,8 +238,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
@@ -255,8 +253,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
@@ -272,8 +269,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
@@ -288,8 +284,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "abc007@gmail.com"}
     - slot{"email": "abc007@gmail.com"}
@@ -304,8 +299,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "d.s007@gmail.com"}
     - slot{"email": "d.s007@gmail.com"}
@@ -323,8 +317,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
@@ -341,8 +334,7 @@
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
-* affirm{"location": "y"}
-    - slot{"location": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
@@ -448,7 +440,6 @@
     - utter_email_send_confirmation
 * deny
     - utter_goodbye
-    - action_restart
 
 ## Generated Story 1816799016789453470
 * restaurant_search{"cuisine": "american"}
@@ -463,7 +454,7 @@
     - action_search_restaurants
     - slot{"location": "delhi"}
     - utter_email_send_confirmation
-* affirm{"affirm": "y"}
+* affirm
     - utter_ask_email_id
 * send_email{"email": "bcd@gmail.com"}
     - slot{"email": "bcd@gmail.com"}
