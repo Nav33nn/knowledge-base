@@ -20,10 +20,14 @@ class ActionSearchRestaurants(Action):
         cuisine = tracker.get_slot('cuisine')
         price_range = tracker.get_slot('range')
         location_detail = zomato.get_location(loc, 1)
-        d1 = json.loads(location_detail)
-        lat = d1["location_suggestions"][0]["latitude"]
-        lon = d1["location_suggestions"][0]["longitude"]
-        city_id = d1["location_suggestions"][0]["city_id"]
+        city_id = 999999999
+        try:
+            d1 = json.loads(location_detail)
+            lat = d1["location_suggestions"][0]["latitude"]
+            lon = d1["location_suggestions"][0]["longitude"]
+            city_id = d1["location_suggestions"][0]["city_id"]
+        except:
+            pass
         with open('data/known_cities_id.pkl','rb') as city_file:
             known_city_ids = pickle.load(city_file)
         if city_id in known_city_ids:            
@@ -62,7 +66,6 @@ class ActionSearchRestaurants(Action):
         else:
             dispatcher.utter_message("I'm really sorry to say this, but we do not operate in {} yet. Sorry for the inconvinience caused"
                                      .format(loc))
-            dispatcher.utter_template("utter_goodbye", tracker)
         return [SlotSet('location', loc)]
         
         
@@ -105,9 +108,14 @@ class ActionSendEmail(Action):
         price_range = tracker.get_slot('range')
         location_detail = zomato.get_location(loc, 1)
         d1 = json.loads(location_detail)
-        lat = d1["location_suggestions"][0]["latitude"]
-        lon = d1["location_suggestions"][0]["longitude"]
-        city_id = d1["location_suggestions"][0]["city_id"]
+        city_id = 999999999
+        try:
+            d1 = json.loads(location_detail)
+            lat = d1["location_suggestions"][0]["latitude"]
+            lon = d1["location_suggestions"][0]["longitude"]
+            city_id = d1["location_suggestions"][0]["city_id"]
+        except:
+            pass
         with open('data/known_cities_id.pkl','rb') as city_file:
             known_city_ids = pickle.load(city_file)
         if city_id in known_city_ids:            

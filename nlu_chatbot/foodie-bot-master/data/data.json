@@ -39123,8 +39123,25 @@
             "value": "under"
           }
         ]
+      },
+      {
+        "text": "bangalore and some good chinese food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "bangalore",
+            "entity": "location"
+          },
+          {
+            "start": 24,
+            "end": 31,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
       }
     ]
-
   }
 }
