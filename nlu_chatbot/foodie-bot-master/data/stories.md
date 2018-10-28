@@ -231,9 +231,6 @@
     - action_send_email
     - utter_goodbye
 
-## Generated Story 3536510584880322198
-* None
-
 ## Generated Story 4291709115114936574
 * restaurant_search{"location": "bangalore", "range": "between", "cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
@@ -283,9 +280,6 @@
     - action_send_email
     - utter_goodbye
 
-## Generated Story 7970621444114191466
-* None
-
 ## Generated Story 106966901103757368
 * restaurant_search{"range": "between", "cuisine": "chinese", "location": "bangalore"}
     - slot{"cuisine": "chinese"}
@@ -318,8 +312,6 @@
     - action_send_email
     - utter_goodbye
 
-## Generated Story 8813724401206447993
-* None
 
 ## Generated Story -3496581748033414984
 * restaurant_search{"location": "bangalore", "cuisine": "chinese"}
