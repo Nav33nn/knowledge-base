@@ -577,3 +577,76 @@
     - slot{"location": "shimla"}
     - utter_goodbye
 
+## Generated Story 1790907978690551297
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "bangalore"}
+    - slot{"location": "bangalore"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_price_range
+* price_check{"range": "between"}
+    - slot{"range": "between"}
+    - action_search_restaurants
+    - slot{"location": "bangalore"}
+    - utter_email_send_confirmation
+* affirm
+    - utter_ask_email_id
+* send_email{"email": "sanjay.7183@gmail.com"}
+    - slot{"email": "sanjay.7183@gmail.com"}
+    - action_send_email
+    - slot{"location": "bangalore"}
+    - utter_ask_howcanhelp
+* goodbye
+    - utter_goodbye
+
+## Generated Story 5597836606031862630
+* greet
+    - utter_greet
+* restaurant_search{"location": "rishikesh"}
+    - slot{"location": "rishikesh"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "north indian"}
+    - slot{"cuisine": "north indian"}
+    - action_search_restaurants
+    - slot{"location": "rishikesh"}
+    - utter_ask_howcanhelp
+* restaurant_search{"location": "allahabad"}
+    - slot{"location": "allahabad"}
+    - action_search_restaurants
+    - slot{"location": "allahabad"}
+    - utter_ask_email_id
+    - utter_email_send_confirmation
+* send_email{"email": "sanjay.7183@gmail.com"}
+    - slot{"email": "sanjay.7183@gmail.com"}
+    - action_send_email
+    - slot{"location": "allahabad"}
+    - utter_ask_howcanhelp
+* goodbye
+    - utter_goodbye
+
+## Generated Story 2757312373372637232
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "mumbai"}
+    - slot{"location": "mumbai"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "american"}
+    - slot{"cuisine": "american"}
+    - utter_ask_price_range
+* price_check{"price": "300"}
+    - slot{"price": "300"}
+    - action_search_restaurants
+    - slot{"location": "mumbai"}
+    - utter_email_send_confirmation
+* send_email{"email": "sanjay.7183@gmail.com"}
+    - slot{"email": "sanjay.7183@gmail.com"}
+    - utter_ask_howcanhelp
+* goodbye
+    - utter_goodbye
+
