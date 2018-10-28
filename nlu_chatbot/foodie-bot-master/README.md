@@ -1,5 +1,6 @@
 # foodie-bot
-## Installation Steps
+## Installation Steps: 
+## Execute the commandas below
 
 # Run the environment setup
 ./env_setup.sh
