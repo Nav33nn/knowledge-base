@@ -9,6 +9,7 @@ actions:
 - utter_ask_cuisine
 - utter_ask_price_range
 - action_search_restaurants
+- utter_email_send_confirmation
 - utter_ask_email_id
 - action_send_email
 config:
@@ -45,9 +46,6 @@ slots:
   location:
     initial_value: null
     type: rasa_core.slots.TextSlot
-  matches:
-    initial_value: null
-    type: rasa_core.slots.UnfeaturizedSlot
   price:
     initial_value: null
     type: rasa_core.slots.TextSlot
@@ -87,6 +85,13 @@ templates:
     text: What price range are you looking at?
   utter_default:
   - text: default message
+  utter_email_send_confirmation:
+  - buttons:
+    - payload: 'Yes'
+      title: Affirm
+    - payload: 'No'
+      title: Deny
+    text: Do You want the search to be send via email?
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye

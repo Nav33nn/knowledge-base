@@ -61,8 +61,10 @@ class ActionSearchRestaurants(Action):
             dispatcher.utter_message("-----" + '\n'.join(response.split('\n')[:5]))
         else:
             dispatcher.utter_message("I'm really sorry to say this, but we do not operate in {} yet. Sorry for the inconvinience caused"
-                                     .format(zomato.get_city_name(city_id)))
+                                     .format(loc))
         return [SlotSet('location', loc)]
+        
+        
 
 
 class ActionSuggest(Action):
@@ -138,9 +140,12 @@ class ActionSendEmail(Action):
                             response = response + "Found " + restaurant['restaurant']['name'] + " in " \
                                    + restaurant['restaurant']['location']['address'] + "\n"
         else:
-            body = 'The city you had selected do not belong to Tier 1 or Tier 2 cities. Apologies extended.'
+            dispatcher.utter_message("I'm really sorry to say this, but we do not operate in {} yet. Sorry for the inconvenience caused".format(loc))
+            return [SlotSet('location', loc)]
+            #body = 'The city you had selected do not belong to Tier 1 or Tier 2 cities. Apologies extended.'
 
         body = '\n'.join(response.split('\n')[:5])
         msg = 'Subject: {}\n\n{}'.format(mail_subject, body)
 
         server.sendmail("bot.foodie.01@gmail.com", email_id, msg)
+        return [SlotSet('location', loc)]

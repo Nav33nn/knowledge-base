@@ -2,10 +2,10 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "location",
         "email",
-        "range",
+        "location",
         "price",
+        "range",
         "cuisine"
       ]
     },
@@ -19,10 +19,13 @@
     },
     "utter_ask_howcanhelp": {
       "slots": []
+    },
+    "action_send_email": {
+      "slots": []
     }
   },
   "rasa_core": "0.11.12",
-  "python": "3.6.6",
+  "python": "3.6.3",
   "max_histories": [
     3,
     5

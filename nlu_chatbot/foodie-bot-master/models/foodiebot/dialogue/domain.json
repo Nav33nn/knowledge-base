@@ -28,6 +28,7 @@
     "prev_utter_ask_cuisine",
     "prev_utter_ask_price_range",
     "prev_action_search_restaurants",
+    "prev_utter_email_send_confirmation",
     "prev_utter_ask_email_id",
     "prev_action_send_email"
   ]
