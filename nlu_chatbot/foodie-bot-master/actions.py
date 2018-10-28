@@ -62,6 +62,7 @@ class ActionSearchRestaurants(Action):
         else:
             dispatcher.utter_message("I'm really sorry to say this, but we do not operate in {} yet. Sorry for the inconvinience caused"
                                      .format(loc))
+            dispatcher.utter_template("utter_goodbye", tracker)
         return [SlotSet('location', loc)]
         
         

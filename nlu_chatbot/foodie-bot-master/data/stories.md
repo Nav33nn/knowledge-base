@@ -17,7 +17,7 @@
     - slot{"email": "abc@abc.com"}
     - action_send_email
     - utter_goodbye
-    - export
+    - action_restart
 
 ## Generated Story 1993277579540566202
 * greet
@@ -40,6 +40,7 @@
     - slot{"email": "abc@abc.com"}
     - action_send_email
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 3320800183399695936
 * greet
@@ -60,6 +61,7 @@
     - action_send_email
 * goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -4639179087166749998
 * greet
@@ -82,7 +84,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
-    - export
+* goodbye
+    - utter_goodbye
+    - action_restart
 
 
 ## Generated Story 4963448062290237512
@@ -103,8 +107,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
-    - export
+    - action_restart
 
 ## Generated Story -1371393708137348274
 * greet
@@ -123,9 +128,9 @@
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
     - action_send_email
-    - utter_ask_howcanhelp
-* deny
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -188370696778953598
 * restaurant_search
@@ -149,6 +154,7 @@
     - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 8104540199928037149
 * greet
@@ -159,9 +165,6 @@
 * restaurant_search{"location": "chennai"}
     - slot{"location": "chennai"}
     - utter_ask_price_range
-* price_check{"price": "300"}
-    - slot{"price": "300"}
-    - utter_ask_price_range
 * price_check{"range": "-"}
     - slot{"range": "between"}
     - action_search_restaurants
@@ -171,8 +174,11 @@
     - utter_ask_email_id
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
-    - utter_ask_howcanhelp
-
+* goodbye
+    - utter_goodbye
+    - action_restart
+    
+    
 ## Generated Story -3483316133665423216
 * restaurant_search{"cuisine": "mexican", "location": "mumbai", "range": "between"}
     - slot{"cuisine": "mexican"}
@@ -186,9 +192,9 @@
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
     - action_send_email
-    - utter_ask_howcanhelp
-* deny
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -5274105035582188331
 * restaurant_search
@@ -209,9 +215,9 @@
 * send_email{"email": "reghuram.rv@gmail.com"}
     - slot{"email": "reghuram.rv@gmail.com"}
     - action_send_email
-    - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
+    - action_restart
 
 
 ## Generated Story 633930060048726669
@@ -227,8 +233,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
-    - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 4291709115114936574
 * restaurant_search{"location": "bangalore", "range": "between", "cuisine": "chinese"}
@@ -243,7 +250,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -5201673030082883406
 * restaurant_search{"cuisine": "chinese", "location": "bangalore", "range": "between"}
@@ -258,8 +267,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
-    - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 3670796697931885406
 * restaurant_search{"cuisine": "chinese", "range": "between", "location": "bangalore"}
@@ -274,7 +284,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 106966901103757368
 * restaurant_search{"range": "between", "cuisine": "chinese", "location": "bangalore"}
@@ -289,7 +301,9 @@
 * send_email{"email": "abc007@gmail.com"}
     - slot{"email": "abc007@gmail.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -7648841222212364292
 * restaurant_search{"range": "between", "location": "bangalore", "cuisine": "chinese"}
@@ -304,7 +318,9 @@
 * send_email{"email": "d.s007@gmail.com"}
     - slot{"email": "d.s007@gmail.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 
 ## Generated Story -3496581748033414984
@@ -322,7 +338,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -4893720700486910855
 * restaurant_search{"cuisine": "chinese", "location": "bangalore"}
@@ -331,7 +349,6 @@
     - utter_ask_price_range
 * price_check{"range": "more"}
     - slot{"range": "more"}
-    - slot{"price": "700"}
     - action_search_restaurants
     - slot{"location": "bangalore"}
     - utter_email_send_confirmation
@@ -340,7 +357,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 5336218531095077697
 * restaurant_search{"location": "bangalore", "range": "between"}
@@ -357,7 +376,9 @@
 * send_email{"email": "abc@abc.com"}
     - slot{"email": "abc@abc.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -4114385369068410516
 * restaurant_search{"range": "between", "location": "bangalore"}
@@ -371,6 +392,7 @@
     - utter_email_send_confirmation
 * deny
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -4788423261798420954
 * greet
@@ -383,8 +405,7 @@
 * restaurant_search{"cuisine": "mexican"}
     - slot{"cuisine": "mexican"}
     - utter_ask_price_range
-* price_check{"range": "more", "price": "700"}
-    - slot{"price": "700"}
+* price_check{"range": "more"}
     - slot{"range": "more"}
     - action_search_restaurants
     - slot{"location": "bangalore"}
@@ -394,7 +415,9 @@
 * send_email{"email": "dipesh.singhal@gmail.com"}
     - slot{"email": "dipesh.singhal@gmail.com"}
     - action_send_email
+* goodbye
     - utter_goodbye
+    - action_restart
 
 
 ## Generated Story -8544261640449368810
@@ -410,7 +433,6 @@
     - utter_ask_price_range
 * price_check{"range": "more"}
     - slot{"range": "more"}
-    - slot{"price": "700"}
     - action_search_restaurants
     - slot{"location": "chennai"}
     - utter_email_send_confirmation
@@ -423,6 +445,7 @@
     - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 7998468385428889827
 * greet
@@ -437,12 +460,12 @@
     - utter_ask_price_range
 * price_check{"range": "less than"}
     - slot{"range": "less"}
-    - slot{"price": "300"}
     - action_search_restaurants
     - slot{"location": "delhi"}
     - utter_email_send_confirmation
 * deny
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 1816799016789453470
 * restaurant_search{"cuisine": "american"}
@@ -451,8 +474,7 @@
 * restaurant_search{"location": "delhi"}
     - slot{"location": "delhi"}
     - utter_ask_price_range
-* price_check{"range": "more", "price": "700"}
-    - slot{"price": "700"}
+* price_check{"range": "more"}
     - slot{"range": "more"}
     - action_search_restaurants
     - slot{"location": "delhi"}
@@ -463,7 +485,9 @@
     - slot{"email": "bcd@gmail.com"}
     - action_send_email
     - slot{"location": "delhi"}
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 599768256890217234
 * restaurant_search{"range": "less", "price": "300"}
@@ -480,6 +504,7 @@
     - utter_email_send_confirmation
 * deny
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -92993947683901549
 * restaurant_search{"range": "more", "price": "700"}
@@ -500,7 +525,9 @@
     - slot{"email": "dip040708@gmail.com"}
     - action_send_email
     - slot{"location": "kolkata"}
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 4358061991144644977
 * restaurant_search
@@ -511,14 +538,14 @@
 * restaurant_search{"cuisine": "south indian"}
     - slot{"cuisine": "south indian"}
     - utter_ask_price_range
-* price_check{"range": "Less", "price": "300"}
-    - slot{"price": "300"}
+* price_check{"range": "Less"}
     - slot{"range": "Less"}
     - action_search_restaurants
     - slot{"location": "indore"}
     - utter_email_send_confirmation
 * deny
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -8522128277739239398
 * restaurant_search
@@ -529,8 +556,7 @@
 * restaurant_search{"cuisine": "north indian"}
     - slot{"cuisine": "north indian"}
     - utter_ask_price_range
-* price_check{"range": "more", "price": "700"}
-    - slot{"price": "700"}
+* price_check{"range": "more"}
     - slot{"range": "more"}
     - action_search_restaurants
     - slot{"location": "chennai"}
@@ -541,7 +567,9 @@
     - slot{"email": "abc@gmail.com"}
     - action_send_email
     - slot{"location": "chennai"}
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 4053657311894282044
 * restaurant_search
@@ -552,14 +580,14 @@
 * restaurant_search{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
     - utter_ask_price_range
-* price_check{"range": "less than", "price": "300"}
-    - slot{"price": "300"}
+* price_check{"range": "less than"}
     - slot{"range": "less"}
     - action_search_restaurants
     - slot{"location": "dehradoon"}
     - utter_email_send_confirmation
 * deny
     - utter_goodbye
+    - action_restart
 
 ## Generated Story -5409371390447508982
 * restaurant_search
@@ -570,12 +598,13 @@
 * restaurant_search{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
     - utter_ask_price_range
-* price_check{"range": "less than", "price": "300"}
-    - slot{"price": "300"}
+* price_check{"range": "less than"}
     - slot{"range": "less"}
     - action_search_restaurants
     - slot{"location": "shimla"}
+* goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 1790907978690551297
 * greet
@@ -602,6 +631,7 @@
     - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 5597836606031862630
 * greet
@@ -627,6 +657,7 @@
     - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
+    - action_restart
 
 ## Generated Story 2757312373372637232
 * greet
@@ -639,8 +670,8 @@
 * restaurant_search{"cuisine": "american"}
     - slot{"cuisine": "american"}
     - utter_ask_price_range
-* price_check{"price": "300"}
-    - slot{"price": "300"}
+* price_check{"range": "less"}
+    - slot{"range": "less"}
     - action_search_restaurants
     - slot{"location": "mumbai"}
     - utter_email_send_confirmation
@@ -649,4 +680,5 @@
     - utter_ask_howcanhelp
 * goodbye
     - utter_goodbye
+    - action_restart
 
