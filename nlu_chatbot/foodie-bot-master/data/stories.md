@@ -411,3 +411,51 @@
     - action_send_email
     - utter_goodbye
 
+## Generated Story -8544261640449368810
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "chennai"}
+    - slot{"location": "chennai"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "italian"}
+    - slot{"cuisine": "italian"}
+    - utter_ask_price_range
+* price_check{"range": "more"}
+    - slot{"range": "more"}
+    - action_search_restaurants
+    - slot{"location": "chennai"}
+    - utter_email_send_confirmation
+* affirm
+    - utter_ask_email_id
+* send_email{"email": "nav33nn92@gmail.com"}
+    - slot{"email": "nav33nn92@gmail.com"}
+    - action_send_email
+    - slot{"location": "chennai"}
+    - utter_ask_howcanhelp
+* goodbye
+    - utter_goodbye
+
+## Generated Story 7998468385428889827
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "delhi"}
+    - slot{"location": "delhi"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "north indian"}
+    - slot{"cuisine": "north indian"}
+    - utter_ask_price_range
+* price_check{"range": "less than"}
+    - slot{"range": "less than"}
+    - action_search_restaurants
+    - slot{"location": "delhi"}
+    - utter_email_send_confirmation
+* deny
+    - utter_goodbye
+    - action_restart
+
+## Generated Story 0
+

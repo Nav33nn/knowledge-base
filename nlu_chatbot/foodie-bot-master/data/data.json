@@ -15,7 +15,7 @@
       }
     ],
     "entity_synonyms": [
-     {
+      {
         "value": "chinese",
         "synonyms": [
           "Chinese",
@@ -2440,7 +2440,7 @@
           }
         ]
       },
-       {
+      {
         "text": "Kochi",
         "intent": "restaurant_search",
         "entities": [
@@ -3421,6 +3421,282 @@
             "entity": "location",
             "start": 0,
             "value": "Aligarh"
+          }
+        ]
+      },
+      {
+        "text": "Bangalore",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "chennai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chennai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "delhi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "mumbai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Bombay",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bombay",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "kochi",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "kochi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "vishakapattanam",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "vishakapattanam",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "vizag",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "vizag",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "italian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "mexican",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "South Indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "South Indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "North Indian",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "North Indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Banashankari",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Banashankari",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "chinese",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "more than 700",
+        "intent": "price_check",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "more",
+            "entity": "range"
+          },
+          {
+            "start": 0,
+            "end": 10,
+            "value": "more than ",
+            "entity": "range"
+          }
+        ]
+      },
+      {
+        "text": "above 700",
+        "intent": "price_check",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "above",
+            "entity": "range"
+          }
+        ]
+      },
+      {
+        "text": "greater than 700",
+        "intent": "price_check",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "greater",
+            "entity": "range"
+          },
+          {
+            "start": 0,
+            "end": 12,
+            "value": "greater than",
+            "entity": "range"
+          }
+        ]
+      },
+      {
+        "text": "less than 300",
+        "intent": "price_check",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "less",
+            "entity": "range"
+          },
+          {
+            "start": 0,
+            "end": 9,
+            "value": "less than",
+            "entity": "range"
+          }
+        ]
+      },
+      {
+        "text": "within 300",
+        "intent": "price_check",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "within",
+            "entity": "range"
+          }
+        ]
+      },
+      {
+        "text": "less than 300",
+        "intent": "price_check",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "less",
+            "entity": "range"
+          },
+          {
+            "start": 0,
+            "end": 9,
+            "value": "less than",
+            "entity": "range"
+          }
+        ]
+      },
+      {
+        "text": "below 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "below",
+            "entity": "range"
           }
         ]
       }
