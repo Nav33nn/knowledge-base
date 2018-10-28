@@ -396,7 +396,7 @@
     - action_send_email
     - utter_goodbye
 
-<<<<<<< HEAD
+
 ## Generated Story -8544261640449368810
 * greet
     - utter_greet
