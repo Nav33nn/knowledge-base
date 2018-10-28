@@ -411,6 +411,7 @@
     - action_send_email
     - utter_goodbye
 
+<<<<<<< HEAD
 ## Generated Story -8544261640449368810
 * greet
     - utter_greet
@@ -457,5 +458,101 @@
     - utter_goodbye
     - action_restart
 
-## Generated Story 0
+## Generated Story 1816799016789453470
+* restaurant_search{"cuisine": "american"}
+    - slot{"cuisine": "american"}
+    - utter_ask_location
+* restaurant_search{"location": "delhi"}
+    - slot{"location": "delhi"}
+    - utter_ask_price_range
+* price_check{"range": "more", "price": "700"}
+    - slot{"price": "700"}
+    - slot{"range": "more"}
+    - action_search_restaurants
+    - slot{"location": "delhi"}
+    - utter_email_send_confirmation
+* affirm{"affirm": "y"}
+    - utter_ask_email_id
+* send_email{"email": "bcd@gmail.com"}
+    - slot{"email": "bcd@gmail.com"}
+    - action_send_email
+    - slot{"location": "delhi"}
+    - utter_goodbye
 
+## Generated Story 599768256890217234
+* restaurant_search{"range": "less", "price": "300"}
+    - slot{"price": "300"}
+    - slot{"range": "less"}
+    - utter_ask_location
+* restaurant_search{"location": "mumbai"}
+    - slot{"location": "mumbai"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "italian"}
+    - slot{"cuisine": "italian"}
+    - action_search_restaurants
+    - slot{"location": "mumbai"}
+    - utter_email_send_confirmation
+* deny
+    - utter_goodbye
+
+## Generated Story -92993947683901549
+* restaurant_search{"range": "more", "price": "700"}
+    - slot{"price": "700"}
+    - slot{"range": "more"}
+    - utter_ask_location
+* restaurant_search{"location": "kolkata"}
+    - slot{"location": "kolkata"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "north indian"}
+    - slot{"cuisine": "north indian"}
+    - action_search_restaurants
+    - slot{"location": "kolkata"}
+    - utter_email_send_confirmation
+* affirm
+    - utter_ask_email_id
+* send_email{"email": "dip040708@gmail.com"}
+    - slot{"email": "dip040708@gmail.com"}
+    - action_send_email
+    - slot{"location": "kolkata"}
+    - utter_goodbye
+
+## Generated Story 4358061991144644977
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "indore"}
+    - slot{"location": "indore"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "south indian"}
+    - slot{"cuisine": "south indian"}
+    - utter_ask_price_range
+* price_check{"range": "Less", "price": "300"}
+    - slot{"price": "300"}
+    - slot{"range": "Less"}
+    - action_search_restaurants
+    - slot{"location": "indore"}
+    - utter_email_send_confirmation
+* deny
+    - utter_goodbye
+
+## Generated Story -8522128277739239398
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "chennai"}
+    - slot{"location": "chennai"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "north indian"}
+    - slot{"cuisine": "north indian"}
+    - utter_ask_price_range
+* price_check{"range": "more", "price": "700"}
+    - slot{"price": "700"}
+    - slot{"range": "more"}
+    - action_search_restaurants
+    - slot{"location": "chennai"}
+    - utter_email_send_confirmation
+* affirm
+    - utter_ask_email_id
+* send_email{"email": "abc@gmail.com"}
+    - slot{"email": "abc@gmail.com"}
+    - action_send_email
+    - slot{"location": "chennai"}
+    - utter_goodbye
