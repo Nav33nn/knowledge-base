@@ -386,3 +386,21 @@
     - slot{"email": "nav33nn92@gmail.com"}
     - utter_goodbye
     - action_restart
+
+## Generated Story -9190215574823445085
+* greet
+    - utter_greet
+* restaurant_search{"cuisine": "chinese", "location": "bangalore", "range": "less than"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "bangalore"}
+    - slot{"range": "less than"}
+    - action_search_restaurants
+    - action_search_restaurants
+    - action_search_restaurants
+    - utter_email_send_confirmation
+* affirm
+    - utter_ask_email_id
+* send_email{"email": "nav33nn92@gmail.com"}
+    - slot{"email": "nav33nn92@gmail.com"}
+    - utter_goodbye
+
