@@ -22,8 +22,7 @@ class CabDriver():
         #𝑠=𝑋𝑖𝑇𝑗𝐷𝑘 𝑤ℎ𝑒𝑟𝑒 𝑖=0…𝑚−1;𝑗=0….𝑡−1;𝑘=0…..𝑑−1, Where 𝑋𝑖 represents a driver’s current location, 𝑇𝑗 represents time component (more specifically hour of the day), 𝐷𝑘 represents the day of the week
         self.state_init = random.choice(self.state_space) #Initialises to any random self_space
         
-        #Starting 1st trip
-        Time_matrix = np.load("TM.npy")
+
 
         # Start the first round
         self.reset()
@@ -79,7 +78,7 @@ class CabDriver():
             requests =15
 
         possible_actions_index = random.sample(range(1, (m-1)*m +1), requests) # (0,0) is not considered as customer request
-        actions = [self.action_space[i-1] for i in possible_actions_index]
+        actions = [self.action_space[i] for i in possible_actions_index]
 
         
         actions.append([0,0])
@@ -91,7 +90,7 @@ class CabDriver():
     def reward_func(self, state, action, Time_matrix):
         """Takes in state, action and Time-matrix and returns the reward"""
         
-        if action == [0,0]:
+        if action[0] == action[1]:
             reward = -C 
             return reward
         
@@ -123,8 +122,8 @@ class CabDriver():
         
         time_next = time_curr + Time_matrix[p][q][time_curr][day_curr]
 
-        day_next = day_curr+int(time_next/24)
-        time_next = time_next % 24
+        day_next = int((day_curr+int(time_next/24)) % 7)
+        time_next = int(time_next % 24)
             
         next_state = (q,time_next,day_next)
         
